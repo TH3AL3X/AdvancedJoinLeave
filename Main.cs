@@ -63,7 +63,7 @@ namespace Main
         protected override void Unload()
         {
             U.Events.OnPlayerConnected -= OnPlayerConnected;
-            U.Events.OnPlayerDisconnected += OnPlayerDisconnected;
+            U.Events.OnPlayerDisconnected -= OnPlayerDisconnected;
         }
     }
 }
