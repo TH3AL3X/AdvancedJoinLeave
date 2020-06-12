@@ -50,12 +50,12 @@ namespace Main
 
         private void OnPlayerDisconnected(UnturnedPlayer player)
         {
-            ChatManager.serverSendMessage(Translate("leave", player.CharacterName).Replace('(', '<').Replace(')', '>'), Color.white, null, null, EChatMode.SAY, Main.Instance.Configuration.Instance.leaveicon, true);
+            ChatManager.serverSendMessage(Translate("leave", player.CharacterName).Replace('(', '<').Replace(')', '>'), Color.white, null, null, EChatMode.SAY, Main.Instance.Configuration.Instance.leaveicon, Main.Instance.Configuration.Instance.richleave);
         }
 
         private void OnPlayerConnected(UnturnedPlayer player)
         {
-            ChatManager.serverSendMessage(Translate("join", player.CharacterName).Replace('(', '<').Replace(')', '>'), Color.white, null, null, EChatMode.SAY, Main.Instance.Configuration.Instance.joinicon, true);
+            ChatManager.serverSendMessage(Translate("join", player.CharacterName).Replace('(', '<').Replace(')', '>'), Color.white, null, null, EChatMode.SAY, Main.Instance.Configuration.Instance.joinicon, Main.Instance.Configuration.Instance.richjoin);
         }
 
    
